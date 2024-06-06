@@ -48,7 +48,6 @@ void loop()
   #endif
 
   #ifdef random
-
     for (int i = 0; i <= NUMPIXELS; i++){
       { int brightness = 50;
         int r = random(brightness);
@@ -59,17 +58,6 @@ void loop()
     }
     pixels.show(); // Durchführen der Pixel-Ansteuerung
     delay (pause);
-    // pixels.setPixelColor(i, pixels.Color(75,150,0)); // Pixel leuchtet in der Farbe Grün
-    // pixels.setPixelColor(i-1, pixels.Color(0,0,0)); // Der vorherige Pixel wird abgeschaltet
-    // pixels.show(); // Durchführen der Pixel-Ansteuerung
-    
-    // if (i==0) {
-    //   pixels.setPixelColor(NUMPIXELS-1, pixels.Color(0,0,0)); // Im Fall von Pixel "0" muss die vorherige (8) ausgeschaltet werden.
-    // }
-    // i=i+1; // Die Variable "i" wird um eine Zahl vergrößert. Die neue Zahl "i" ist dann die nächste LED im Led-Ring
-    // if (i==NUMPIXELS) {
-    //   i=0; // Wenn die Variable den Wert 9 erreicht hat, wird die Variable auf den Wert "0" zurück gesetzt, da die Nummerierung der LEDs nur von 0 bis 8 geht.
-    // }
   #endif
 
 }
