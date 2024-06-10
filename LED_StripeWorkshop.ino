@@ -5,9 +5,9 @@
 #endif
 
 // Hier werden die unterschiedlichen Beispiele ein und ausgeschaltet.
-// #define row 
+#define row 
 // #define SINGLECOLOR
-#define random
+// #define RANDOM
 
 int i=0;
 
@@ -48,9 +48,9 @@ void loop()
   }
   #endif
 
-  #ifdef random
+  #ifdef RANDOM
     for (int i = 0; i <= NUMPIXELS; i++){
-      { int brightness = 50;
+      { int brightness = 20;
         int r = random(brightness); // Zufällige Helligkeit der Farbe rot
         int g = random(brightness); // Zufällige Helligkeit der Farbe grün
         int b = random(brightness); // Zufällige Helligkeit der Farbe blau
