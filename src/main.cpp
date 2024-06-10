@@ -4,9 +4,9 @@
 #include <avr/power.h>
 #endif
 
-// #define row
+// #define ROW
 // #define SINGLECOLOR
-#define random
+#define RANDOM
 
 int i=0;
 
@@ -15,13 +15,13 @@ int i=0;
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-int pause=1000; // 100 Millisekunden Pause bis zur Ansteuerung der nächsten LED.
+int pause=100; // 100 Millisekunden Pause bis zur Ansteuerung der nächsten LED.
 
 void setup() 
 {
   randomSeed(analogRead(0));
   pixels.begin(); // Initialisierung der NeoPixel
-  #ifdef SINGLECOLOR
+  #ifdef SINGLECOLOR  
   for (i=0;i<=NUMPIXELS;i++){
         pixels.setPixelColor(i, pixels.Color(75,150,0)); // Pixel leuchtet in der Farbe rot
   }
@@ -31,7 +31,7 @@ void setup()
 
 void loop() 
 {
-  #ifdef row
+  #ifdef ROW
   pixels.setPixelColor(i, pixels.Color(75,150,0)); // Pixel leuchtet in der Farbe Grün
   pixels.setPixelColor(i-1, pixels.Color(0,0,0)); // Der vorherige Pixel wird abgeschaltet
   pixels.show(); // Durchführen der Pixel-Ansteuerung
@@ -47,7 +47,7 @@ void loop()
   }
   #endif
 
-  #ifdef random
+  #ifdef RANDOM
     for (int i = 0; i <= NUMPIXELS; i++){
       { int brightness = 50;
         int r = random(brightness);
