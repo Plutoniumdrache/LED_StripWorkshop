@@ -5,7 +5,7 @@
 #endif
 
 // Hier werden die unterschiedlichen Beispiele ein und ausgeschaltet.
-#define row 
+#define ROW 
 // #define SINGLECOLOR
 // #define RANDOM
 
@@ -32,7 +32,7 @@ void setup()
 
 void loop() 
 {
-  #ifdef row
+  #ifdef ROW
   pixels.setPixelColor(i, pixels.Color(0,100,0)); // Pixel leuchtet in der Farbe Grün
   pixels.setPixelColor(i-1, pixels.Color(0,0,0)); // Der vorherige Pixel wird abgeschaltet
   pixels.show(); // Durchführen der Pixel-Ansteuerung
